@@ -216,23 +216,7 @@ python3 scripts/validate_skill.py
 **能不能直接搬它的题库到别处？**
 可以，MIT 许可证；保留版权声明即可。
 
-## 路线图
-
-- [x] v1.0：决策树追问 + 需求确认清单 + GitHub 检索与复用询问
-- [x] v1.1：更名为 DeepDig；改为显式触发；追问上限收紧到 8 问
-- [ ] v2.0：把确认结果沉淀为项目级 `CONTEXT.md` 与 ADR（架构决策记录）
-- [ ] v2.0：拆成「1 行用户入口 + 可被其他 Skill 委托调用的引擎」两层结构
-- [ ] v2.1：可选的追问模板包（按领域：Web / CLI / 数据管道 / Agent 工具）
-
-## 贡献
-
-欢迎补充题库、示例与反模式。请先读 [CONTRIBUTING.md](./CONTRIBUTING.md)；安全问题请私下联系维护者，不要开公开 Issue。
 
 ## 许可证
 
 [MIT](./LICENSE) © 2026 DeepDig contributors
-
-## 致谢
-
-- [Matt Pocock](https://github.com/mattpocock) 的 grill-me / grilling 思路：先问清楚，再写代码。
-- 所有指出「这个需求还没问清楚」的人。
