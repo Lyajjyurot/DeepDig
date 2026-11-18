@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先读贡献指南
+    url: https://github.com/Lyajjyurot/DeepDig/blob/main/CONTRIBUTING.md
+    about: 了解可贡献的内容、写作规范与 PR 检查清单。
+  - name: 报告安全问题
+    url: https://github.com/Lyajjyurot/DeepDig/security/advisories/new
+    about: 请不要在公开 Issue 中披露漏洞细节或可被利用的提示词。

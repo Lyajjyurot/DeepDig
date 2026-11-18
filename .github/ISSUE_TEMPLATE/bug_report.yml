@@ -1,0 +1,77 @@
+name: 行为问题（Bug）
+description: Skill 没有按预期追问、收口或检索时使用
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先确认已读过 [SKILL.md](../../SKILL.md) 与 [贡献指南](../../CONTRIBUTING.md)。
+        请脱敏后再粘贴对话，不要包含真实姓名、内部链接、API Key 或未公开代码。
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 实际发生了什么
+      description: 简述 Agent 的输出，并指出它违反了哪条规则。
+      placeholder: 例如：第 3 轮时一次抛出了 3 个问题，且没有「其他（请说明）」。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望的行为
+      description: 引用 SKILL.md 或 references 中的对应条目（写明文件与章节）。
+      placeholder: 例如：SKILL.md「铁律」第 1 条「一次一问」。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从触发词开始，按轮次贴出用户输入与 Agent 输出（可脱敏）。
+      placeholder: |
+        1. 输入 `/DeepDig 我想做一个 ...`
+        2. Agent 回复了 ...
+        3. 期望是 ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rule
+    attributes:
+      label: 违反的规则
+      multiple: true
+      options:
+        - 显式触发（未点名也启动）
+        - 一次一问
+        - 最多 8 问
+        - 选项化 / 其他（请说明）
+        - 事实不问
+        - 三态归宿（DECIDED / RABBIT HOLE / NO-GO）
+        - 确认前不动手
+        - 评级诚实
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境
+      description: Agent 平台与版本、模型、操作系统、Skill 版本（如 v1.1.0）。
+      placeholder: Trae x.y / Claude Code x.y / 模型名 / Windows 11 / v1.1.0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已检查最新版本，问题仍可复现
+          required: true
+        - label: 我已移除对话中的敏感信息
+          required: true
